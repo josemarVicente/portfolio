@@ -20,7 +20,7 @@ export default function FixedUI() {
           </a>
         ))}
       </div>
-      <a href="/resume.pdf" className="fixed-resume">RESUME &#9783;</a>
+      <a href="/resume.pdf" className="fixed-resume">RESUME &#8599;</a>
     </>
   );
 }

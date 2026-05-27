@@ -20,7 +20,7 @@ export default function Hero() {
         duration: 1.2,
         ease: 'power3.out',
         stagger: 0.15,
-        delay: 0.1,
+        delay: 0.2,
       });
 
       const tl = gsap.timeline({

@@ -5,7 +5,7 @@ const services = [
     num: '01',
     title: 'FULL-STACK\nDEVELOPMENT',
     sub: 'Modern web development & scalable applications',
-    desc: 'Building responsive and performant web applications using React, Next.js, Node.js, and databases. From landing pages to full SaaS products.',
+    desc: 'Building responsive and performant web applications using React, Next.js, Vue.js, Node.js, and databases. From landing pages to full SaaS products.',
   },
   {
     num: '02',
@@ -17,13 +17,13 @@ const services = [
     num: '03',
     title: 'UI / UX\nDESIGN',
     sub: 'Interface design & design systems',
-    desc: 'Designing clean, intentional interfaces that balance aesthetics with usability. Figma prototypes, component libraries, and accessibility-first thinking.',
+    desc: 'Creating clean, intentional interfaces that balance aesthetics with usability. Component libraries and accessibility-first thinking.',
   },
   {
     num: '04',
     title: 'API &\nBACKEND',
     sub: 'RESTful & real-time systems',
-    desc: 'Architecting APIs, database schemas, authentication flows, and real-time features. Node.js, PostgreSQL, Firebase, and cloud deployments.',
+    desc: 'Architecting APIs, database schemas, authentication flows, and real-time features. Node.js, Laravel, PostgreSQL, Firebase, and cloud deployments.',
   },
 ];
 
@@ -31,7 +31,7 @@ export default function Services() {
   return (
     <section className="services" id="services">
       <div className="blob blob-1" style={{ opacity: 0.45 }} />
-      <span className="section-label reveal">WHAT I DO</span>
+      <span className="bg-heading reveal">WHAT I DO</span>
       <div className="services-grid">
         {services.map((s) => (
           <div className="service-card reveal" key={s.num}>
@@ -43,7 +43,7 @@ export default function Services() {
             </h3>
             <p className="service-sub">{s.sub}</p>
             <p className="service-desc">{s.desc}</p>
-            <span className="service-arrow">&#8599;</span>
+
           </div>
         ))}
       </div>

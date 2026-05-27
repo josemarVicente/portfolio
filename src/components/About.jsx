@@ -1,15 +1,15 @@
 import './About.css';
 
 // import photo from '../assets/your-photo.jpg';
-const photo = null;
+import photo from '../assets/portrait.webp';
 
 export default function About() {
   return (
     <section className="about" id="about">
       <div className="about-photo-wrap reveal">
         {photo
-          ? <img src={photo} alt="About" className="about-photo" />
-          : <div className="about-photo-placeholder">Your photo</div>
+          ? <img src={photo} alt="Photo" className="about-photo" />
+          : <div className="about-photo-placeholder">Personal Photo</div>
         }
       </div>
       <div className="about-content">

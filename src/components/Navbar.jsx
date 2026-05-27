@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <a href="#" className="nav-logo">YN.</a>
-      <span className="nav-email">your.email@gmail.com</span>
+      <span className="nav-email">josemaralessio@gmail.com</span>
       <ul className="nav-links">
         {links.map((l) => (
           <li key={l.label}><a href={l.href}>{l.label}</a></li>

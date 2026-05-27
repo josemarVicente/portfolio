@@ -2,16 +2,19 @@
   padding: 120px max(80px, 6vw);
   border-top: 1px solid var(--border);
   position: relative;
+  text-align: center;
   overflow: hidden;
 }
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
+  text-align: left;
 }
 .service-card {
   background: var(--black);

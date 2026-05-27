@@ -5,6 +5,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 120px max(80px, 6vw);
+  border-top: 1px solid var(--border);
   position: relative;
   background: #030303;
 }
@@ -14,7 +15,7 @@
   aspect-ratio: 4/5;
   object-fit: cover;
   object-position: top;
-  border-radius: 3px;
+  border-radius: 4px;
   filter: grayscale(100%);
   display: block;
 }

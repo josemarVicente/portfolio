@@ -45,6 +45,6 @@
   width: 60px;
   height: 60px;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(3px) saturate(140%);
+  backdrop-filter: blur(1px) saturate(140%);
   border-color: rgba(255, 255, 255, 0.4);
 }

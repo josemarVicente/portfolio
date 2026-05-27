@@ -3,48 +3,78 @@
   border-top: 1px solid var(--border);
   min-height: 100vh;
   position: relative;
+  text-align: center;
   overflow: hidden;
 }
+
 .timeline {
   position: relative;
+  padding: 40px 0; /* Gives the dot structural clearance space at the limits */
 }
+
 .tl-line {
   position: absolute;
   left: 50%;
-  top: 0; bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--purple) 15%, var(--purple) 85%, transparent);
+  top: 0;      /* Changed from 40px to 0 for flawless tracking alignment */
+  bottom: 0;   /* Changed from 40px to 0 */
+  width: 2px;
+
+  /* Dominant Purple with a subtle Cyan base gradient */
+  background: linear-gradient(to bottom,
+    rgba(139, 92, 246, 0.9) 0%,
+    rgba(139, 92, 246, 0.7) 70%,
+    rgba(6, 182, 212, 0.6) 100%
+  );
   transform: translateX(-50%);
+  transform-origin: top;
+  transition: none !important;
+  will-change: transform;
+  z-index: 1; /* Explicitly forced behind the dot layer */
 }
+
 .tl-glow-dot {
   position: absolute;
   left: 50%;
-  top: 4px;
-  width: 8px; height: 8px;
-  background: var(--purple);
+  top: 0; /* Starts at absolute 0 to match the timeline line's bounding box */
+  width: 8px;
+  height: 8px;
+  background: #ffffff !important; /* CRITICAL: Solid hot white core point */
   border-radius: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 18px var(--purple-glow), 0 0 40px var(--purple-dim);
+  transform: translate(-50%, -50%); /* Centers the point directly on the line coordinate */
+  z-index: 10; /* Forces the dot to ALWAYS ride completely on top of the line */
+  transition: none !important;
+  will-change: top;
+
+  /* Massive high-intensity purple neon bloom with a micro white core */
+  box-shadow:
+    0px 0px 6px #ffffff,                         /* Intense center white highlight */
+    0px 0px 14px rgba(139, 92, 246, 1.0),        /* Super-saturated purple inner glow */
+    0px 0px 28px rgba(139, 92, 246, 0.85),       /* Thick core bloom */
+    0px 0px 55px rgba(139, 92, 246, 0.5),        /* Wide atmospheric aura */
+    0px 0px 18px rgba(6, 182, 212, 0.4);         /* Subtle cyan trailing accent */
 }
+
 .tl-row {
   display: grid;
   grid-template-columns: 1fr 100px 1fr;
-  border-bottom: 1px solid var(--border);
 }
-.tl-row:last-child { border-bottom: none; }
+
 .tl-left {
-  padding: 32px 36px 32px 0;
+  padding: 48px 40px 48px 0;
   text-align: right;
 }
+
 .tl-center {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 34px;
 }
+
 .tl-right {
-  padding: 32px 0 32px 36px;
+  padding: 48px 0 48px 40px;
+  text-align: left;
 }
+
 .tl-year {
   font-family: var(--font-display);
   font-size: clamp(24px, 3vw, 38px);
@@ -52,33 +82,42 @@
   color: var(--white);
   letter-spacing: -0.02em;
 }
+
 .tl-role {
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 700;
   margin-bottom: 4px;
 }
+
 .tl-context {
   font-size: 13px;
   color: var(--gray);
 }
+
 .tl-desc {
   font-size: 14px;
-  color: rgba(240,237,232,0.55);
+  color: rgba(240, 237, 232, 0.55);
   line-height: 1.75;
 }
-/* dimmed older entries */
+
+/* Dim styling for historically older text records */
 .tl-dim .tl-role,
-.tl-dim .tl-year { color: rgba(255,255,255,0.3); }
-.tl-dim .tl-context { color: rgba(136,136,136,0.4); }
-.tl-dim .tl-desc    { color: rgba(255,255,255,0.18); }
+.tl-dim .tl-year { color: rgba(255, 255, 255, 0.4); }
+.tl-dim .tl-context { color: rgba(136, 136, 136, 0.5); }
+.tl-dim .tl-desc    { color: rgba(220, 215, 205, 0.4); }
+
+/* Custom reveal baseline defaults handled smoothly via GSAP engine */
+.timeline .reveal {
+  transition: none !important;
+  will-change: transform, opacity;
+}
 
 @media (max-width: 900px) {
   .experience { padding: 80px 24px; }
-  .tl-line, .tl-glow-dot { display: none; }
+  .tl-line, .tl-glow-dot { display: none !important; } /* Strips timeline scroll overhead on mobile sizes */
   .tl-row { grid-template-columns: 1fr; }
-  .tl-left { text-align: left; padding: 20px 0 8px; border-bottom: none; }
-  .tl-center { justify-content: flex-start; padding: 0 0 4px; }
-  .tl-right { padding: 0 0 20px; }
-  .tl-year { font-size: 22px; }
+  .tl-left { text-align: left; padding: 24px 0 4px; }
+  .tl-right { padding: 0 0 24px; }
+  .tl-year { font-size: 24px; }
 }

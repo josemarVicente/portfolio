@@ -38,7 +38,7 @@ export default function Contact() {
       </div>
 
       <div className="contact-footer">
-        <p className="credits">Designed and Developed<br />by Your Name</p>
+        <p className="credits">Designed and Developed<br />by Josemar Vicente</p>
         <span className="copy-year">&#169; 2026</span>
       </div>
     </section>

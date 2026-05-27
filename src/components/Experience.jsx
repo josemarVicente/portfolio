@@ -1,4 +1,10 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Experience.css';
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const items = [
   {
@@ -32,26 +38,79 @@ const items = [
 ];
 
 export default function Experience() {
+  const containerRef = useRef(null);
+  const lineRef = useRef(null);
+  const dotRef = useRef(null);
+  const rowsRef = useRef([]);
+
+  useEffect(() => {
+  let ctx = gsap.context(() => {
+
+    // 1. Core tracking line + neon bead track
+    gsap.fromTo([lineRef.current, dotRef.current],
+      { scaleY: 0, top: "0%" }, // Initial starting values grouped
+      {
+        scaleY: 1,
+        top: "100%",
+        ease: "none", // Must be "none" for synchronous trailing with your wheel
+        scrollTrigger: {
+          trigger: ".timeline",
+          start: "top 35%", // Starts tracking when top of line passes 35% viewport depth
+          end: "bottom 65%", // Ends tracking cleanly at 65% depth
+          scrub: 0.1,       // Reduced from 0.5 to keep the dot bound instantly to the wheel frame without lagging back
+        }
+      }
+    );
+
+    // 2. Clear content row text fades
+    rowsRef.current.forEach((row) => {
+      if (!row) return;
+
+      gsap.fromTo(row.querySelectorAll('.reveal'),
+        { opacity: 0.05, y: 10 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: row,
+            start: "top 75%", // Reveals the text slightly earlier as you scroll down
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+
+  }, containerRef);
+
+  return () => ctx.revert();
+}, []);
+
   return (
-    <section className="experience" id="experience">
+    <section className="experience" id="experience" ref={containerRef}>
       <div className="blob blob-2" style={{ left: '40%', right: 'auto', opacity: 0.5 }} />
-      <span className="section-label reveal">CAREER & EXPERIENCE</span>
-      <h2 className="section-heading reveal">
-        My career <span className="accent">&amp;<br />experience</span>
-      </h2>
+      <span className="bg-heading">CAREER & EXPERIENCE</span>
 
       <div className="timeline">
-        <div className="tl-line" />
-        <div className="tl-glow-dot" />
+        {/* Animated progressive line */}
+        <div className="tl-line" ref={lineRef} />
+        {/* Animated dynamic neon glow dot */}
+        <div className="tl-glow-dot" ref={dotRef} />
 
-        {items.map((item) => (
-          <div className={`tl-row${item.dim ? ' tl-dim' : ''}`} key={item.year}>
+        {items.map((item, index) => (
+          <div
+            className={`tl-row${item.dim ? ' tl-dim' : ''}`}
+            key={item.year}
+            ref={el => rowsRef.current[index] = el}
+          >
             <div className="tl-left reveal">
               <p className="tl-role">{item.role}</p>
               <p className="tl-context">{item.context}</p>
+              <span className="tl-year">{item.year}</span>
             </div>
             <div className="tl-center">
-              <span className="tl-year">{item.year}</span>
+              {/* Optional: Add anchor intersections later here if needed */}
             </div>
             <div className="tl-right reveal">
               <p className="tl-desc">{item.desc}</p>
