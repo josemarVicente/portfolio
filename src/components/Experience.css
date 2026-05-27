@@ -1,0 +1,84 @@
+.experience {
+  padding: 120px max(80px, 6vw);
+  border-top: 1px solid var(--border);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.timeline {
+  position: relative;
+}
+.tl-line {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--purple) 15%, var(--purple) 85%, transparent);
+  transform: translateX(-50%);
+}
+.tl-glow-dot {
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  width: 8px; height: 8px;
+  background: var(--purple);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 18px var(--purple-glow), 0 0 40px var(--purple-dim);
+}
+.tl-row {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.tl-row:last-child { border-bottom: none; }
+.tl-left {
+  padding: 32px 36px 32px 0;
+  text-align: right;
+}
+.tl-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 34px;
+}
+.tl-right {
+  padding: 32px 0 32px 36px;
+}
+.tl-year {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+.tl-role {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.tl-context {
+  font-size: 13px;
+  color: var(--gray);
+}
+.tl-desc {
+  font-size: 14px;
+  color: rgba(240,237,232,0.55);
+  line-height: 1.75;
+}
+/* dimmed older entries */
+.tl-dim .tl-role,
+.tl-dim .tl-year { color: rgba(255,255,255,0.3); }
+.tl-dim .tl-context { color: rgba(136,136,136,0.4); }
+.tl-dim .tl-desc    { color: rgba(255,255,255,0.18); }
+
+@media (max-width: 900px) {
+  .experience { padding: 80px 24px; }
+  .tl-line, .tl-glow-dot { display: none; }
+  .tl-row { grid-template-columns: 1fr; }
+  .tl-left { text-align: left; padding: 20px 0 8px; border-bottom: none; }
+  .tl-center { justify-content: flex-start; padding: 0 0 4px; }
+  .tl-right { padding: 0 0 20px; }
+  .tl-year { font-size: 22px; }
+}
