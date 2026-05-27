@@ -14,7 +14,7 @@
   transition: color 0.2s, transform 0.2s;
 }
 .fixed-social-link:hover { color: var(--white); transform: scale(1.15); }
-.fixed-social-link svg { width: 24px; height: 24px; }
+.fixed-social-link svg { width: 32px; height: 32px; }
 
 .fixed-resume {
   position: fixed;
