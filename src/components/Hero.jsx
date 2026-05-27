@@ -20,7 +20,7 @@ export default function Hero() {
         duration: 1.2,
         ease: 'power3.out',
         stagger: 0.15,
-        delay: 0.2,
+        delay: 0.1,
       });
 
       const tl = gsap.timeline({
@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="hero-container">
         <div className="feature-badge" ref={badgeRef}>
           <span className="badge-tag">New</span>
-          <span className="badge-text">Building Tchiiwa LMS — Version 2.0 incoming</span>
+          <span className="badge-text">Building Tchiiwa Learn — Version 2.0 incoming</span>
         </div>
 
         <h1 className="hero-headline" ref={headlineRef}>
@@ -59,11 +59,8 @@ export default function Hero() {
         </h1>
 
         <div className="hero-bio-row" ref={bioRowRef}>
-          <span>Hello, I'm Josemar Vicente</span>
-          <div className="inline-avatar-wrap">
-            <div className="avatar-placeholder" />
-          </div>
-          <span>a Full Stack Developer</span>
+          <span>Hi, I'm Josemar Vicente,</span>
+          <span className=''>a Full Stack Developer</span>
         </div>
 
         <div className="hero-actions-row" ref={actionsRef}>

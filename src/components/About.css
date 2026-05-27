@@ -5,8 +5,8 @@
   align-items: center;
   min-height: 100vh;
   padding: 120px max(80px, 6vw);
-  border-top: 1px solid var(--border);
   position: relative;
+  background: #030303;
 }
 .about-photo-wrap { position: relative; }
 .about-photo {
