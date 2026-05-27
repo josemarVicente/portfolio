@@ -4,58 +4,62 @@ import './Cursor.css';
 export default function Cursor() {
   const dotRef = useRef(null);
   const ringRef = useRef(null);
-  const pos = useRef({ x: 0, y: 0 });
-  const ring = useRef({ x: 0, y: 0 });
-  const rafRef = useRef(null);
+
+  // Track target (mouse) and current (lerp) coordinates
+  const mouseCoords = useRef({ x: 0, y: 0 });
+  const ringCoords = useRef({ x: 0, y: 0 });
+  const rafId = useRef(null);
 
   useEffect(() => {
     const onMove = (e) => {
-      pos.current = { x: e.clientX, y: e.clientY };
+      mouseCoords.current = { x: e.clientX, y: e.clientY };
+
+      // Dot snaps instantly using transform for maximum performance
       if (dotRef.current) {
-        dotRef.current.style.left = e.clientX + 'px';
-        dotRef.current.style.top  = e.clientY + 'px';
+        dotRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
       }
     };
-    document.addEventListener('mousemove', onMove);
 
     const animate = () => {
-      ring.current.x += (pos.current.x - ring.current.x) * 0.12;
-      ring.current.y += (pos.current.y - ring.current.y) * 0.12;
-      if (ringRef.current) {
-        ringRef.current.style.left = ring.current.x + 'px';
-        ringRef.current.style.top  = ring.current.y + 'px';
-      }
-      rafRef.current = requestAnimationFrame(animate);
-    };
-    rafRef.current = requestAnimationFrame(animate);
+      // Elastic lerp tracking formula
+      ringCoords.current.x += (mouseCoords.current.x - ringCoords.current.x) * 0.12;
+      ringCoords.current.y += (mouseCoords.current.y - ringCoords.current.y) * 0.12;
 
-    // grow ring on interactive elements
-    const grow = () => {
       if (ringRef.current) {
-        ringRef.current.style.width  = '56px';
-        ringRef.current.style.height = '56px';
-        ringRef.current.style.borderColor = 'rgba(124,58,237,0.5)';
+        ringRef.current.style.transform = `translate3d(${ringCoords.current.x}px, ${ringCoords.current.y}px, 0) translate(-50%, -50%)`;
       }
-    };
-    const shrink = () => {
-      if (ringRef.current) {
-        ringRef.current.style.width  = '36px';
-        ringRef.current.style.height = '36px';
-        ringRef.current.style.borderColor = 'rgba(255,255,255,0.25)';
-      }
-    };
-    const targets = document.querySelectorAll('a, button, .work-col, .service-card, .stack-item');
-    targets.forEach((el) => { el.addEventListener('mouseenter', grow); el.addEventListener('mouseleave', shrink); });
 
+      rafId.current = requestAnimationFrame(animate);
+    };
+
+    // Hover Event Handlers via Class Toggles
+    const handleGrow = () => ringRef.current?.classList.add('is-hovered');
+    const handleShrink = () => ringRef.current?.classList.remove('is-hovered');
+
+    // Attach listeners
+    window.addEventListener('mousemove', onMove);
+    rafId.current = requestAnimationFrame(animate);
+
+    const interactiveElements = document.querySelectorAll('a, button, .work-col, .service-card, .stack-item');
+    interactiveElements.forEach((el) => {
+      el.addEventListener('mouseenter', handleGrow);
+      el.addEventListener('mouseleave', handleShrink);
+    });
+
+    // Complete cleanup on unmount
     return () => {
-      document.removeEventListener('mousemove', onMove);
-      cancelAnimationFrame(rafRef.current);
+      window.removeEventListener('mousemove', onMove);
+      cancelAnimationFrame(rafId.current);
+      interactiveElements.forEach((el) => {
+        el.removeEventListener('mouseenter', handleGrow);
+        el.removeEventListener('mouseleave', handleShrink);
+      });
     };
   }, []);
 
   return (
     <>
-      <div className="cursor-dot"  ref={dotRef} />
+      <div className="cursor-dot" ref={dotRef} />
       <div className="cursor-ring" ref={ringRef} />
     </>
   );
