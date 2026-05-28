@@ -9,7 +9,11 @@
   position: relative;
   background: #030303;
 }
-.about-photo-wrap { position: relative; }
+.about-photo-wrap {
+  position: relative;
+  max-width: 550px;   /* caps the photo width on large screens */
+  justify-self: end;  /* keeps it pushed toward the center column gap */
+}
 .about-photo {
   width: 100%;
   aspect-ratio: 4/5;
@@ -41,4 +45,5 @@
 
 @media (max-width: 900px) {
   .about { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; }
+  .about-photo-wrap { max-width: 100%; justify-self: stretch; }
 }
