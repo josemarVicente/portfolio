@@ -10,7 +10,7 @@ export default function Contact() {
     <section className="contact" id="contact">
       <div className="blob blob-1" style={{ opacity: 0.35, right: 0, top: 0 }} />
 
-      <h2 className="contact-heading reveal">
+      <h2 className="bg-heading reveal">
         Let's work<br /><span className="accent">together.</span>
       </h2>
 

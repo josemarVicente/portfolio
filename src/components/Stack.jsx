@@ -24,7 +24,7 @@ const stackCategories = [
       { name: 'Spring Boot',icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
       { name: 'Laravel',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg' },
       { name: 'Tailwind',   icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
-      { name: 'GSAP',       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/greensock/greensock-original.svg' },
+      { name: 'GSAP',       icon: 'https://github.com/devicons/devicon/tree/v2.17.0/icons/greensock/greensock-original.svg' },
     ]
   },
   {
