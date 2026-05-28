@@ -22,8 +22,9 @@ body {
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.6;
-  overflow-x: hidden;
   cursor: none;
+  /* No overflow-x: hidden or clip here — GSAP horizontal scroll needs
+     the full scrollWidth to be measurable and paintable */
 }
 
 /* scrollbar */
@@ -51,7 +52,6 @@ body {
 }
 .accent { color: var(--purple); }
 
-/* reveal animation base */
 .reveal {
   opacity: 0;
   transform: translateY(28px);

@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import './Hero.css';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function Hero() {
   const sectionRef  = useRef(null);
@@ -12,34 +13,30 @@ export default function Hero() {
   const bioRowRef   = useRef(null);
   const actionsRef  = useRef(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from([badgeRef.current, headlineRef.current, bioRowRef.current, actionsRef.current], {
-        opacity: 0,
-        y: 30,
-        duration: 1.2,
-        ease: 'power3.out',
-        stagger: 0.15,
-        delay: 0.2,
-      });
+  useGSAP(() => {
+    gsap.from([badgeRef.current, headlineRef.current, bioRowRef.current, actionsRef.current], {
+      opacity: 0,
+      y: 30,
+      duration: 1.2,
+      ease: 'power3.out',
+      stagger: 0.15,
+      delay: 0.2,
+    });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-        },
-      });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+      },
+    });
 
-      tl.to(badgeRef.current,    { y: -30, opacity: 0 }, 0)
-        .to(headlineRef.current, { y: -50, opacity: 0.15 }, 0)
-        .to(bioRowRef.current,   { scale: 0.95, opacity: 0 }, 0)
-        .to(actionsRef.current,  { y: 30, opacity: 0 }, 0);
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+    tl.to(badgeRef.current,    { y: -30, opacity: 0 }, 0)
+      .to(headlineRef.current, { y: -50, opacity: 0.15 }, 0)
+      .to(bioRowRef.current,   { scale: 0.95, opacity: 0 }, 0)
+      .to(actionsRef.current,  { y: 30, opacity: 0 }, 0);
+  }, { scope: sectionRef });
 
   return (
     <section className="hero" id="hero" ref={sectionRef}>

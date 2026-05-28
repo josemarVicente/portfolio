@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import './Experience.css';
 
 // Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const items = [
   {
@@ -43,22 +44,20 @@ export default function Experience() {
   const dotRef = useRef(null);
   const rowsRef = useRef([]);
 
-  useEffect(() => {
-  let ctx = gsap.context(() => {
-
+  useGSAP(() => {
     // 1. Core tracking line + neon bead track
     gsap.fromTo([lineRef.current, dotRef.current],
-      { scaleY: 0, top: "0%" }, // Initial starting values grouped
+      { scaleY: 0, top: '0%' },
       {
         scaleY: 1,
-        top: "100%",
-        ease: "none", // Must be "none" for synchronous trailing with your wheel
+        top: '100%',
+        ease: 'none',
         scrollTrigger: {
-          trigger: ".timeline",
-          start: "top 35%", // Starts tracking when top of line passes 35% viewport depth
-          end: "bottom 65%", // Ends tracking cleanly at 65% depth
-          scrub: 0.1,       // Reduced from 0.5 to keep the dot bound instantly to the wheel frame without lagging back
-        }
+          trigger: '.timeline',
+          start: 'top 35%',
+          end: 'bottom 65%',
+          scrub: 0.1,
+        },
       }
     );
 
@@ -75,17 +74,13 @@ export default function Experience() {
           stagger: 0.1,
           scrollTrigger: {
             trigger: row,
-            start: "top 75%", // Reveals the text slightly earlier as you scroll down
-            toggleActions: "play none none reverse"
-          }
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
+          },
         }
       );
     });
-
-  }, containerRef);
-
-  return () => ctx.revert();
-}, []);
+  }, { scope: containerRef });
 
   return (
     <section className="experience" id="experience" ref={containerRef}>

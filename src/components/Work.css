@@ -1,22 +1,38 @@
 .work {
   border-top: 1px solid var(--border);
+  overflow-x: clip;
 }
+
 .work-header {
   padding: 100px max(80px, 6vw) 0;
 }
+
 .work-cols {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  --work-cards-visible: 3.25;
+  --work-card-min: 380px;
+  --work-card-max: 560px;
+  --work-card-w: clamp(var(--work-card-min), calc(100vw / var(--work-cards-visible)), var(--work-card-max));
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   border-top: 1px solid var(--border);
   margin-top: 48px;
+  will-change: transform;
 }
+
 .work-col {
+  flex: 0 0 var(--work-card-w);
+  width: var(--work-card-w);
+  min-height: 400px;
   border-right: 1px solid var(--border);
   padding: 36px 28px 56px;
+  box-sizing: border-box;
   transition: background 0.3s;
 }
 .work-col:last-child { border-right: none; }
-.work-col:hover { background: rgba(255,255,255,0.015); }
+.work-col:hover      { background: rgba(255,255,255,0.015); }
+
 .work-num {
   font-family: var(--font-display);
   font-size: clamp(52px, 5.5vw, 76px);
@@ -26,6 +42,7 @@
   margin-bottom: 6px;
   user-select: none;
 }
+
 .work-title-row {
   display: flex;
   justify-content: space-between;
@@ -43,6 +60,7 @@
   color: var(--gray);
   white-space: nowrap;
 }
+
 .work-tools-label {
   display: block;
   font-size: 12px;
@@ -53,7 +71,9 @@
   font-size: 13px;
   color: rgba(240,237,232,0.5);
   line-height: 1.6;
+  margin: 0;
 }
+
 .work-img {
   width: 100%;
   aspect-ratio: 16/10;
@@ -65,6 +85,7 @@
   display: block;
 }
 .work-col:hover .work-img { filter: grayscale(0%); }
+
 .work-img-placeholder {
   width: 100%;
   aspect-ratio: 16/10;
@@ -77,11 +98,20 @@
   justify-content: center;
   font-size: 12px;
   color: #333;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
   .work-header { padding: 60px 24px 0; }
-  .work-cols { grid-template-columns: 1fr; }
-  .work-col { border-right: none; border-bottom: 1px solid var(--border); }
+  .work-cols {
+    flex-direction: column;
+    transform: none !important;
+  }
+  .work-col {
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
   .work-col:last-child { border-bottom: none; }
 }
