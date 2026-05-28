@@ -70,7 +70,7 @@
         "context": "Featured Work",
         "period": "WinnersSmart",
         "desc": "A comprehensive fleet management and car rental architecture comprising dual cross-platform mobile apps (Client & Partner) synchronized with real-time web dashboards for vehicle owners and internal operations."
-    },
+      },
       "freelance": {
         "role": "Freelance Software Engineer",
         "context": "Independent",
@@ -88,7 +88,7 @@
     }
   },
   "contact": {
-    "heading": "Let's work together.",
+    "heading": "Get in touch.",
     "emailLabel": "EMAIL",
     "emailNote": "Available for freelance & full‑time",
     "locationLabel": "LOCATION",
