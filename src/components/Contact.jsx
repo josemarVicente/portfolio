@@ -33,7 +33,7 @@ export default function Contact() {
           <ul className="social-list">
             {socials.map((s) => (
               <li key={s.label}>
-                <a href={s.href}>{s.label} <span>&#8599;</span></a>
+                <a href={s.href} target='_blank' rel='noopener noreferrer'>{s.label} <span>&#8599;</span></a>
               </li>
             ))}
           </ul>

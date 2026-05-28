@@ -17,7 +17,7 @@
     "label": "ABOUT ME",
     "photoAlt": "Photo",
     "photoPlaceholder": "Personal Photo",
-    "text": "I'm a <strong>full-stack and mobile developer</strong> focused on turning ideas into real products. I enjoy building modern web applications and mobile experiences that are fast, fluid, and visually clean. I'm fluent in the <strong>React, Next.js, Node.js, and React Native</strong> ecosystem.<br/> <br/>For me, engineering doesn't stop at the backend; it extends to interface detail and the experience of the people who use the app.<br/> <br/>My goal is simple: <strong>clean architecture, scalable code, and software that actually reaches users' hands</strong>."
+    "text": "I'm a <strong>full-stack and mobile developer</strong> focused on turning ideas into real products. I enjoy building modern web applications and mobile experiences that are fast, fluid, and visually clean. Specialized in: <strong>clean architecture, scalable code, and software that actually reaches users' hands</strong>."
   },
   "services": {
     "heading": "WHAT I DO",
@@ -25,7 +25,7 @@
       "fullstack": {
         "title": "FULL‑STACK\nDEVELOPMENT",
         "sub": "Modern web development & scalable applications",
-        "desc": "Building responsive and performant web applications using React, Next.js, Node.js, and databases. From landing pages to full SaaS products."
+        "desc": "I build responsive and performant applications with React, Node.js, Laravel, and databases. From landing pages and corporate management systems to complete SaaS products."
       },
       "mobile": {
         "title": "MOBILE\nDEVELOPMENT",
@@ -75,7 +75,7 @@
         "role": "Freelance Software Engineer",
         "context": "Independent",
         "period": "2021 — Present",
-        "desc": "Delivering robust, end-to-end technical solutions for diverse business verticals. Designed and deployed custom HR management systems, performance-optimized landing pages, and high-availability backends using Express.js, Next.js, and Laravel."
+        "desc": "Delivering robust, end-to-end technical solutions for diverse business verticals. Designed and deployed custom corporate management systems, performance-optimized landing pages, and high-availability backends using Express.js, Next.js, and Laravel."
       }
     }
   },

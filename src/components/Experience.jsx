@@ -100,7 +100,7 @@ export default function Experience() {
         {/* Animated dynamic neon glow dot */}
         <div className="tl-glow-dot" ref={dotRef} />
 
-        {['njila', 'tchiiwa', 'freelance', 'aliacars', 'montra', 'simutrade'].map((id, index) => (
+        {['njila', 'tchiiwa', 'freelance', 'aliacars'].map((id, index) => (
           <div
             className="tl-row"
             key={id}

@@ -17,7 +17,7 @@
     "label": "SOBRE MIM",
     "photoAlt": "Foto",
     "photoPlaceholder": "Foto Pessoal",
-    "text": "Sou um <strong>programador full-stack e mobile</strong> focado em transformar ideias em produtos reais. Gosto de construir aplicações web modernas e experiências mobile que sejam rápidas, fluidas e visualmente limpas. Domino o ecossistema do <strong>React, Next.js, Node.js e React Native</strong>.<br/> <br/>Para mim, a engenharia não termina no backend; estende-se até ao detalhe da interface e à experiência de quem usa a app.<br/> <br/>O meu objetivo é simples: <strong>arquitetura limpa, código escalável e software que chega mesmo às mãos dos utilizadores</strong>."
+    "text": "Sou um <strong>programador full-stack e mobile</strong> focado em transformar ideias em produtos reais. Gosto de construir aplicações web modernas e experiências mobile que sejam rápidas, fluidas e visualmente limpas. Especialista em: <strong>arquitetura limpa, código escalável e software que chega mesmo às mãos dos utilizadores</strong>."
   },
   "services": {
     "heading": "O QUE EU FAÇO",
@@ -25,7 +25,7 @@
       "fullstack": {
         "title": "DESENVOLVIMENTO\nFULL‑STACK",
         "sub": "Web moderna e aplicações escaláveis",
-        "desc": "Construo aplicações responsivas e performáticas com React, Next.js, Node.js e bases de dados. De landing pages a produtos SaaS completos."
+        "desc": "Construo aplicações responsivas e performáticas com React, Node.js, Laravel e bases de dados. De landing pages, sistemas de gestão corporativa a produtos SaaS completos."
       },
       "mobile": {
         "title": "DESENVOLVIMENTO\nMOBILE",
@@ -63,7 +63,7 @@
         "role": "Líder de Desenvolvimento Frontend",
         "context": "Tchiiwa Learn",
         "period": "Atualmente",
-        "desc": "Lidero o desenvolvimento frontend das aplicações da Tchiiwa numa arquitetura de microfrontends. Responsável pelos frontends web e mobile de produtos core, incluindo o Tchiiwa Learn — uma plataforma LMS de grande escala."
+        "desc": "Lidero o desenvolvimento frontend das aplicações da Tchiiwa numa arquitetura de microfrontends. Responsável pelos frontends web e mobile de produtos core, incluindo o Tchiiwa Learn — uma plataforma educacional de grande escala."
       },
       "aliacars": {
         "role": "Ecossistema Aliacars",
@@ -75,7 +75,7 @@
         "role": "Engenheiro de Software Freelancer",
         "context": "Independente",
         "period": "2021 — Presente",
-        "desc": "Desenvolvimento end-to-end de soluções técnicas para diversos setores de negócio. Engenharia de sistemas de gestão de RH personalizados, landing pages otimizadas para conversão e backends robustos utilizando Express.js, Next.js e Laravel."
+        "desc": "Desenvolvimento end-to-end de soluções técnicas para diversos setores de negócio. Engenharia de sistemas de gestão corporativa personalizados, landing pages otimizadas para conversão e backends robustos utilizando Express.js, Next.js e Laravel."
       }
     }
   },
