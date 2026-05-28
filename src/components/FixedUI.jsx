@@ -1,4 +1,5 @@
 import './FixedUI.css';
+import { useTranslation } from 'react-i18next';
 
 const socials = [
   { label: 'GitHub', href: 'https://github.com/josemarVicente', icon: (
@@ -11,6 +12,8 @@ const socials = [
 
 
 export default function FixedUI() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="fixed-social">
@@ -20,7 +23,7 @@ export default function FixedUI() {
           </a>
         ))}
       </div>
-      <a href="/resume.pdf" className="fixed-resume">RESUME &#8599;</a>
+      <a href="/resume.pdf" className="fixed-resume">{t('fixed.resume')} &#8599;</a>
     </>
   );
 }

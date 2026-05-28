@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { useTranslation } from 'react-i18next';
 import './Hero.css';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -12,6 +13,7 @@ export default function Hero() {
   const headlineRef = useRef(null);
   const bioRowRef   = useRef(null);
   const actionsRef  = useRef(null);
+  const { t } = useTranslation();
 
   useGSAP(() => {
     const els = [badgeRef.current, headlineRef.current, bioRowRef.current, actionsRef.current].filter(Boolean);
@@ -55,23 +57,23 @@ export default function Hero() {
 
       <div className="hero-container">
         <div className="feature-badge" ref={badgeRef}>
-          <span className="badge-tag">New</span>
-          <span className="badge-text">Building Tchiiwa Learn — Version 2.0 incoming</span>
+          <span className="badge-tag">{t('hero.badgeTag')}</span>
+          <span className="badge-text">{t('hero.badgeText')}</span>
         </div>
 
         <h1 className="hero-headline" ref={headlineRef}>
-          Code that feels designed.<br />
-          <span className="italic-serif">Engineering that actually ships.</span>
+          {t('hero.headlineTop')}<br />
+          <span className="italic-serif">{t('hero.headlineItalic')}</span>
         </h1>
 
         <div className="hero-bio-row" ref={bioRowRef}>
-          <span>Hi, I'm Josemar Vicente,</span>
-          <span className=''>a Full Stack Developer</span>
+          <span>{t('hero.bioHello')}</span>
+          <span className=''>{t('hero.bioRole')}</span>
         </div>
 
         <div className="hero-actions-row" ref={actionsRef}>
           <a href="#contact" className="btn-primary-pill">
-            Let's Connect
+            {t('hero.cta')}
             <span className="arrow-circle">→</span>
           </a>
         </div>

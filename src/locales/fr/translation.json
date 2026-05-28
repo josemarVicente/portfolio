@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "À PROPOS",
+    "work": "PROJETS",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "badgeTag": "Nouveau",
+    "badgeText": "Je construis Tchiiwa Learn — Version 2.0 arrive",
+    "headlineTop": "Du code qui semble designé.",
+    "headlineItalic": "Une ingénierie qui livre vraiment.",
+    "bioHello": "Salut, je suis Josemar Vicente,",
+    "bioRole": "développeur Full Stack",
+    "cta": "On se connecte"
+  },
+  "about": {
+    "label": "À PROPOS DE MOI",
+    "photoAlt": "Photo",
+    "photoPlaceholder": "Photo personnelle",
+    "text": "Je suis un <strong>développeur Full‑Stack & Mobile autodidacte</strong>. Je crée des applications web modernes et des expériences mobiles rapides, accessibles et soignées. Mon expertise couvre <strong>React, Next.js, Node.js, React Native</strong> et l’infrastructure cloud.<br/> <br/>Actuellement concentré sur des <strong>produits qui sortent vraiment</strong> — architecture propre, excellente UX, zéro blabla.<br/> <br/>Le code est un artisanat. La performance est un design."
+  },
+  "services": {
+    "heading": "CE QUE JE FAIS",
+    "items": {
+      "fullstack": {
+        "title": "DÉVELOPPEMENT\nFULL‑STACK",
+        "sub": "Web moderne & applications scalables",
+        "desc": "Création d’applications web responsives et performantes avec React, Next.js, Node.js et des bases de données. De landing pages à des produits SaaS complets."
+      },
+      "mobile": {
+        "title": "DÉVELOPPEMENT\nMOBILE",
+        "sub": "Apps cross‑platform avec React Native",
+        "desc": "Expériences mobiles fluides pour iOS et Android depuis une base de code unique : UI polish, animations et offline."
+      },
+      "uiux": {
+        "title": "UI / UX\nDESIGN",
+        "sub": "Interfaces & design systems",
+        "desc": "Interfaces propres et intentionnelles, équilibre esthétique et ergonomie. Bibliothèques de composants et accessibilité."
+      },
+      "backend": {
+        "title": "API &\nBACKEND",
+        "sub": "Systèmes REST & temps réel",
+        "desc": "Architecture d’APIs, schémas BD, authentification et fonctionnalités temps réel. Node.js, Laravel, PostgreSQL, Firebase et déploiement cloud."
+      }
+    }
+  },
+  "work": {
+    "heading": "Projets",
+    "toolsLabel": "Outils et fonctionnalités",
+    "imagePlaceholder": "Capture du projet"
+  },
+  "experience": {
+    "heading": "CARRIÈRE & EXPÉRIENCE"
+  },
+  "stack": {
+    "heading": "TECH STACK",
+    "categories": {
+      "core": "Langages & Base",
+      "frameworks": "Frameworks & Runtimes",
+      "tools": "Base de données, Cloud & Outils"
+    }
+  },
+  "contact": {
+    "heading": "Travaillons ensemble.",
+    "emailLabel": "EMAIL",
+    "emailNote": "Disponible freelance & temps plein",
+    "locationLabel": "LOCALISATION",
+    "locationValue": "Luanda, Angola",
+    "locationNote": "Ouvert au remote (monde)",
+    "socialLabel": "SOCIAL",
+    "credits": "Designé et développé<br/>par Josemar Vicente"
+  },
+  "fixed": {
+    "resume": "CV"
+  }
+}

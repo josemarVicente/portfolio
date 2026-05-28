@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "SOBRE",
+    "work": "PROJETOS",
+    "contact": "CONTACTO"
+  },
+  "hero": {
+    "badgeTag": "Novo",
+    "badgeText": "A construir Tchiiwa Learn — Versão 2.0 a caminho",
+    "headlineTop": "Código que parece desenhado.",
+    "headlineItalic": "Engenharia que realmente entrega.",
+    "bioHello": "Olá, eu sou o Josemar Vicente,",
+    "bioRole": "um Desenvolvedor Full Stack",
+    "cta": "Vamos conversar"
+  },
+  "about": {
+    "label": "SOBRE MIM",
+    "photoAlt": "Foto",
+    "photoPlaceholder": "Foto Pessoal",
+    "text": "Sou um <strong>Desenvolvedor Full‑Stack e Mobile autodidata</strong>. Construo aplicações web modernas e experiências mobile rápidas, acessíveis e cuidadosamente feitas. Tenho experiência em <strong>React, Next.js, Node.js e React Native</strong> e infraestrutura cloud.<br/> <br/>Atualmente focado em criar <strong>produtos que saem do papel</strong> — arquitetura limpa, ótimo UX, sem enrolação.<br/> <br/>Código é artesanato. Performance é design."
+  },
+  "services": {
+    "heading": "O QUE EU FAÇO",
+    "items": {
+      "fullstack": {
+        "title": "DESENVOLVIMENTO\nFULL‑STACK",
+        "sub": "Web moderna e aplicações escaláveis",
+        "desc": "Construo aplicações responsivas e performáticas com React, Next.js, Node.js e bases de dados. De landing pages a produtos SaaS completos."
+      },
+      "mobile": {
+        "title": "DESENVOLVIMENTO\nMOBILE",
+        "sub": "Apps cross‑platform com React Native",
+        "desc": "Crio experiências mobile fluidas para iOS e Android a partir de uma única base de código: UI polish, animações e suporte offline."
+      },
+      "uiux": {
+        "title": "UI / UX\nDESIGN",
+        "sub": "Interface e design systems",
+        "desc": "Interfaces limpas e intencionais que equilibram estética com usabilidade. Component libraries e acessibilidade em primeiro lugar."
+      },
+      "backend": {
+        "title": "API &\nBACKEND",
+        "sub": "Sistemas REST e real‑time",
+        "desc": "Arquitetura de APIs, esquemas de BD, autenticação e features em tempo real. Node.js, Laravel, PostgreSQL, Firebase e deploy em cloud."
+      }
+    }
+  },
+  "work": {
+    "heading": "Projetos",
+    "toolsLabel": "Ferramentas e funcionalidades",
+    "imagePlaceholder": "Screenshot do projeto"
+  },
+  "experience": {
+    "heading": "CARREIRA & EXPERIÊNCIA"
+  },
+  "stack": {
+    "heading": "TECH STACK",
+    "categories": {
+      "core": "Linguagens & Base",
+      "frameworks": "Frameworks & Runtimes",
+      "tools": "Base de Dados, Cloud & Ferramentas"
+    }
+  },
+  "contact": {
+    "heading": "Vamos trabalhar juntos.",
+    "emailLabel": "EMAIL",
+    "emailNote": "Disponível para freelance e full‑time",
+    "locationLabel": "LOCALIZAÇÃO",
+    "locationValue": "Luanda, Angola",
+    "locationNote": "Disponível para remoto (mundial)",
+    "socialLabel": "SOCIAL",
+    "credits": "Design e Desenvolvimento<br/>por Josemar Vicente"
+  },
+  "fixed": {
+    "resume": "CURRÍCULO"
+  }
+}

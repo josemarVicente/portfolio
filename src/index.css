@@ -72,3 +72,9 @@ body {
   position: relative;
   z-index: 1;
 }
+.italic-serif {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #e4e4e7;
+}

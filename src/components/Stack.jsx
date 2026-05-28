@@ -1,4 +1,5 @@
 import './Stack.css';
+import { useTranslation } from 'react-i18next';
 
 const stackCategories = [
   {
@@ -24,7 +25,7 @@ const stackCategories = [
       { name: 'Spring Boot',icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
       { name: 'Laravel',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg' },
       { name: 'Tailwind',   icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
-      { name: 'GSAP',       icon: 'https://github.com/devicons/devicon/tree/v2.17.0/icons/greensock/greensock-original.svg' },
+      { name: 'GSAP',       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/greensock/greensock-original.svg' },
     ]
   },
   {
@@ -43,18 +44,23 @@ const stackCategories = [
 ];
 
 export default function Stack() {
+  const { t } = useTranslation();
   // Use a global tracker for layout index calculation to stagger cascade animations flawlessly
   let absoluteIndex = 0;
 
   return (
     <section className="stack" id="stack">
       <div className="blob blob-1" style={{ left: '50%', transform: 'translateX(-50%)', opacity: 0.35 }} />
-      <h2 className="bg-heading">TECH STACK</h2>
+      <h2 className="bg-heading">{t('stack.heading')}</h2>
 
       <div className="stack-container">
         {stackCategories.map((cat) => (
           <div className="stack-category-group" key={cat.category}>
-            <h3 className="stack-category-title">{cat.category}</h3>
+            <h3 className="stack-category-title">
+              {cat.category === 'Languages & Core' ? t('stack.categories.core')
+                : cat.category === 'Frameworks & Runtimes' ? t('stack.categories.frameworks')
+                : t('stack.categories.tools')}
+            </h3>
             <div className="stack-grid">
               {cat.items.map((t) => {
                 absoluteIndex++;

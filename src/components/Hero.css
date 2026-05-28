@@ -28,7 +28,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120vw;
+  width: 150vw;
   height: 60vw;
   border-radius: 50%;
   background: transparent;
@@ -157,12 +157,6 @@
   color: #f4f4f5;
   margin-bottom: 44px;
   will-change: transform, opacity;
-}
-.italic-serif {
-  font-family: 'Playfair Display', 'Georgia', serif;
-  font-style: italic;
-  font-weight: 300;
-  color: #e4e4e7;
 }
 
 /* --- Bio Row --- */

@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { useTranslation } from 'react-i18next';
 import './Experience.css';
 
 // Register the ScrollTrigger plugin
@@ -43,6 +44,7 @@ export default function Experience() {
   const lineRef = useRef(null);
   const dotRef = useRef(null);
   const rowsRef = useRef([]);
+  const { t } = useTranslation();
 
   useGSAP(() => {
     const timelineEl = containerRef.current?.querySelector('.timeline');
@@ -120,7 +122,7 @@ export default function Experience() {
   return (
     <section className="experience" id="experience" ref={containerRef}>
       <div className="blob blob-2" style={{ left: '40%', right: 'auto', opacity: 0.5 }} />
-      <span className="bg-heading">CAREER & EXPERIENCE</span>
+      <span className="bg-heading">{t('experience.heading')}</span>
 
       <div className="timeline">
         {/* Animated progressive line */}

@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { useTranslation } from 'react-i18next';
 import './Work.css';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -18,6 +19,7 @@ const projects = [
 export default function Work() {
   const sectionRef = useRef(null);
   const trackRef   = useRef(null);
+  const { t } = useTranslation();
 
   useGSAP(() => {
     const section = sectionRef.current;
@@ -90,7 +92,7 @@ export default function Work() {
     <section className="work" id="work" ref={sectionRef}>
       <div className="work-header">
         <h2 className="bg-heading" style={{ textAlign: 'center'}}>
-          Projects
+          {t('work.heading')}
         </h2>
       </div>
 
@@ -102,9 +104,9 @@ export default function Work() {
               <span className="work-title">{p.title}</span>
               <span className="work-cat">{p.category}</span>
             </div>
-            <span className="work-tools-label">Tools and features</span>
+            <span className="work-tools-label">{t('work.toolsLabel')}</span>
             <p className="work-tools">{p.tools}</p>
-            <div className="work-img-placeholder">Project screenshot</div>
+            <div className="work-img-placeholder">{t('work.imagePlaceholder')}</div>
           </div>
         ))}
       </div>
