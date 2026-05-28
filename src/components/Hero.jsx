@@ -14,14 +14,23 @@ export default function Hero() {
   const actionsRef  = useRef(null);
 
   useGSAP(() => {
-    gsap.from([badgeRef.current, headlineRef.current, bioRowRef.current, actionsRef.current], {
-      opacity: 0,
-      y: 30,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.15,
-      delay: 0.2,
-    });
+    const els = [badgeRef.current, headlineRef.current, bioRowRef.current, actionsRef.current].filter(Boolean);
+
+    // Baseline state so refresh mid-page doesn't "invert" animations.
+    gsap.set(els, { opacity: 1, y: 0, scale: 1, clearProps: 'transform' });
+
+    const isNearTop = window.scrollY < 20;
+    if (isNearTop) {
+      gsap.from(els, {
+        opacity: 0,
+        y: 30,
+        duration: 1.2,
+        ease: 'power3.out',
+        stagger: 0.15,
+        delay: 0.2,
+        immediateRender: false,
+      });
+    }
 
     const tl = gsap.timeline({
       scrollTrigger: {

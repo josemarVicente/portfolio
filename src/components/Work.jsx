@@ -89,9 +89,8 @@ export default function Work() {
   return (
     <section className="work" id="work" ref={sectionRef}>
       <div className="work-header">
-        <span className="section-label">MY WORK</span>
-        <h2 className="section-heading">
-          Selected<br />Projects
+        <h2 className="bg-heading" style={{ textAlign: 'center'}}>
+          Projects
         </h2>
       </div>
 
