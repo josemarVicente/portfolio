@@ -69,18 +69,11 @@
 
 .tl-left {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: baseline;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
   padding: 48px 40px 48px 0;
   text-align: right;
-}
-
-.tl-role-col {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
 .tl-center {
@@ -94,12 +87,14 @@
   text-align: left;
 }
 
-.tl-year {
+.tl-period {
   font-family: var(--font-display);
-  font-size: clamp(24px, 3vw, 38px);
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.02em;
+  font-size: clamp(13px, 1.4vw, 16px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 2px;
 }
 
 .tl-role {
@@ -123,7 +118,7 @@
 }
 
 .tl-dim .tl-role,
-.tl-dim .tl-year { color: rgba(255, 255, 255, 0.4); }
+.tl-dim .tl-period { color: rgba(255, 255, 255, 0.4); }
 .tl-dim .tl-context { color: rgba(136, 136, 136, 0.5); }
 .tl-dim .tl-desc    { color: rgba(220, 215, 205, 0.4); }
 
@@ -137,11 +132,10 @@
   .tl-line-base, .tl-line-fill, .tl-glow-dot { display: none !important; }
   .tl-row { grid-template-columns: 1fr; }
   .tl-left {
+    align-items: flex-start;
     text-align: left;
     padding: 24px 0 4px;
-    justify-content: space-between;
-    gap: 14px;
+    gap: 6px;
   }
   .tl-right { padding: 0 0 24px; }
-  .tl-year { font-size: 24px; }
 }

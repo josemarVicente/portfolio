@@ -20,7 +20,9 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
-      <a href="#" className="nav-logo">YN.</a>
+      <a href="#" className="nav-logo">
+        <img src="/logo.png" alt="Logo" className="nav-logo-img" />
+      </a>
       <span className="nav-email">josemaralessio@gmail.com</span>
       <div className="nav-right">
         <ul className="nav-links">

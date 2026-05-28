@@ -8,37 +8,6 @@ import './Experience.css';
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const items = [
-  {
-    role: 'Building Something New',
-    context: 'Self / Startup',
-    year: 'NOW',
-    desc: 'Pushing the boundaries of full-stack and mobile development. Exploring new frameworks, open-source contributions, and indie products.',
-    dim: false,
-  },
-  {
-    role: 'Full-Stack Developer',
-    context: 'Freelance & Projects',
-    year: '2024',
-    desc: 'Built complete web and mobile applications. Developed RESTful APIs, responsive UIs, and deployed production apps for various clients.',
-    dim: false,
-  },
-  {
-    role: 'Frontend Developer',
-    context: 'Freelance & Projects',
-    year: '2023',
-    desc: 'Mastered React, built component libraries, and started exploring backend architecture with Node.js and Express.',
-    dim: false,
-  },
-  {
-    role: 'UI Designer',
-    context: 'Freelance',
-    year: '2022',
-    desc: 'Started the journey with graphic and UI design. Built visual identities and discovered a deep passion for building things on the web.',
-    dim: false,
-  },
-];
-
 export default function Experience() {
   const containerRef = useRef(null);
   const lineRef = useRef(null);
@@ -131,24 +100,22 @@ export default function Experience() {
         {/* Animated dynamic neon glow dot */}
         <div className="tl-glow-dot" ref={dotRef} />
 
-        {items.map((item, index) => (
+        {['njila', 'tchiiwa', 'freelance', 'aliacars', 'montra', 'simutrade'].map((id, index) => (
           <div
-            className={`tl-row${item.dim ? ' tl-dim' : ''}`}
-            key={item.year}
+            className="tl-row"
+            key={id}
             ref={el => rowsRef.current[index] = el}
           >
             <div className="tl-left reveal">
-              <div className="tl-role-col">
-                <p className="tl-role">{item.role}</p>
-                <p className="tl-context">{item.context}</p>
-              </div>
-              <span className="tl-year">{item.year}</span>
+              <p className="tl-role">{t(`experience.items.${id}.role`)}</p>
+              <p className="tl-context">{t(`experience.items.${id}.context`)}</p>
+              <p className="tl-period">{t(`experience.items.${id}.period`)}</p>
             </div>
             <div className="tl-center">
               {/* Optional: Add anchor intersections later here if needed */}
             </div>
             <div className="tl-right reveal">
-              <p className="tl-desc">{item.desc}</p>
+              <p className="tl-desc">{t(`experience.items.${id}.desc`)}</p>
             </div>
           </div>
         ))}

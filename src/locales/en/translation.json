@@ -50,7 +50,46 @@
     "imagePlaceholder": "Project screenshot"
   },
   "experience": {
-    "heading": "CAREER & EXPERIENCE"
+    "heading": "CAREER & EXPERIENCE",
+    "featured": "Featured Work",
+    "items": {
+      "njila": {
+        "role": "Full-Stack Engineer",
+        "context": "Njila",
+        "period": "Feb 2025 — Now",
+        "desc": "Architecting and scaling cross-platform mobile applications primarily using React Native to digitize public transit and urban mobility ecosystems. Spearheaded full-stack web features utilizing Vue.js, Laravel, and Inertia.js to deliver seamless, monolithic-speed user interfaces."
+      },
+      "tchiiwa": {
+        "role": "Lead Frontend Engineer",
+        "context": "Tchiiwa",
+        "period": "Present",
+        "desc": "Leading frontend development across Tchiiwa's applications on a microfrontend architecture. Responsible for the web and mobile frontends of core products, including Tchiiwa Learn — an enterprise-grade Learning Management System."
+      },
+      "freelance": {
+        "role": "Freelance Software Engineer",
+        "context": "Independent",
+        "period": "2021 — Present",
+        "desc": "Delivering robust, end-to-end technical solutions for diverse business verticals. Designed and deployed custom HR management systems, performance-optimized landing pages, and high-availability backends using Express.js, Next.js, and Laravel."
+      },
+      "aliacars": {
+        "role": "Aliacars Ecosystem",
+        "context": "Featured Work",
+        "period": "WinnersSmart",
+        "desc": "A comprehensive fleet management and car rental architecture comprising dual cross-platform mobile apps (Client & Partner) synchronized with real-time web dashboards for vehicle owners and internal operations."
+      },
+      "montra": {
+        "role": "Montra",
+        "context": "Featured Work",
+        "period": "Personal Project",
+        "desc": "A minimalist fintech mobile application tailored for precise, real-time budget tracking and personal finance management."
+      },
+      "simutrade": {
+        "role": "SimuTrade",
+        "context": "Featured Work",
+        "period": "Personal Project",
+        "desc": "A high-fidelity paper trading simulator designed for real-time market data ingestion and risk-free financial portfolio simulation."
+      }
+    }
   },
   "stack": {
     "heading": "TECH STACK",

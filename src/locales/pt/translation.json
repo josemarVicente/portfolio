@@ -50,7 +50,46 @@
     "imagePlaceholder": "Screenshot do projeto"
   },
   "experience": {
-    "heading": "CARREIRA & EXPERIÊNCIA"
+    "heading": "CARREIRA & EXPERIÊNCIA",
+    "featured": "Projetos em Destaque",
+    "items": {
+      "njila": {
+        "role": "Full Stack Engineer",
+        "context": "Njila",
+        "period": "Fev 2025 — Atualmente",
+        "desc": "Responsável pela arquitetura e escala de aplicações móveis multiplataforma com React Native, focadas na digitalização de ecossistemas de transporte público e mobilidade urbana. Atuei também no desenvolvimento web focado no ecossistema Vue.js, Laravel e Inertia.js, otimizando a entrega de funcionalidades full-stack."
+      },
+      "tchiiwa": {
+        "role": "Lead Frontend Engineer",
+        "context": "Tchiiwa",
+        "period": "Atualmente",
+        "desc": "Lidero o desenvolvimento frontend das aplicações da Tchiiwa numa arquitetura de microfrontends. Responsável pelos frontends web e mobile de produtos core, incluindo o Tchiiwa Learn — uma plataforma LMS de grande escala."
+      },
+      "freelance": {
+        "role": "Engenheiro de Software Freelancer",
+        "context": "Independente",
+        "period": "2021 — Presente",
+        "desc": "Desenvolvimento end-to-end de soluções técnicas para diversos setores de negócio. Engenharia de sistemas de gestão de RH personalizados, landing pages otimizadas para conversão e backends robustos utilizando Express.js, Next.js e Laravel."
+      },
+      "aliacars": {
+        "role": "Ecossistema Aliacars",
+        "context": "Projetos em Destaque",
+        "period": "WinnersSmart",
+        "desc": "Infraestrutura de gestão de frotas que integra duas aplicações móveis (Cliente e Proprietário) conectadas em tempo real a dashboards web de administração e controlo interno."
+      },
+      "montra": {
+        "role": "Montra",
+        "context": "Projetos em Destaque",
+        "period": "Projeto Pessoal",
+        "desc": "Aplicação móvel fintech desenvolvida com uma estética minimalista para controlo de orçamento e gestão financeira pessoal."
+      },
+      "simutrade": {
+        "role": "SimuTrade",
+        "context": "Projetos em Destaque",
+        "period": "Projeto Pessoal",
+        "desc": "Simulador de paper trading de alta fidelidade para processamento de dados de mercado em tempo real e simulação de carteiras financeiras."
+      }
+    }
   },
   "stack": {
     "heading": "TECH STACK",

@@ -50,7 +50,46 @@
     "imagePlaceholder": "Capture du projet"
   },
   "experience": {
-    "heading": "CARRIÈRE & EXPÉRIENCE"
+    "heading": "CARRIÈRE & EXPÉRIENCE",
+    "featured": "Projets phares",
+    "items": {
+      "njila": {
+        "role": "Ingénieur Full-Stack",
+        "context": "Njila",
+        "period": "Fév 2025 — Actuellement",
+        "desc": "Conception et mise à l’échelle d’applications mobiles cross-platform avec React Native pour digitaliser les écosystèmes de transport public et de mobilité urbaine. Pilotage de fonctionnalités web full-stack avec Vue.js, Laravel et Inertia.js pour des interfaces fluides à la vitesse monolithique."
+      },
+      "tchiiwa": {
+        "role": "Lead Frontend Engineer",
+        "context": "Tchiiwa",
+        "period": "Actuellement",
+        "desc": "Je pilote le développement frontend des applications Tchiiwa sur une architecture microfrontend. Responsable des frontends web et mobile des produits phares, dont Tchiiwa Learn — une plateforme LMS de niveau entreprise."
+      },
+      "freelance": {
+        "role": "Ingénieur logiciel freelance",
+        "context": "Indépendant",
+        "period": "2021 — Présent",
+        "desc": "Livraison de solutions techniques robustes de bout en bout pour des secteurs variés. Conception et déploiement de systèmes RH sur mesure, landing pages optimisées et backends haute disponibilité avec Express.js, Next.js et Laravel."
+      },
+      "aliacars": {
+        "role": "Écosystème Aliacars",
+        "context": "Projets phares",
+        "period": "WinnersSmart",
+        "desc": "Architecture complète de gestion de flotte et location de véhicules : deux applications mobiles cross-platform (Client & Partenaire) synchronisées avec des dashboards web en temps réel pour propriétaires et opérations internes."
+      },
+      "montra": {
+        "role": "Montra",
+        "context": "Projets phares",
+        "period": "Projet personnel",
+        "desc": "Application mobile fintech minimaliste pour un suivi budgétaire précis en temps réel et la gestion des finances personnelles."
+      },
+      "simutrade": {
+        "role": "SimuTrade",
+        "context": "Projets phares",
+        "period": "Projet personnel",
+        "desc": "Simulateur de paper trading haute fidélité pour l’ingestion de données de marché en temps réel et la simulation de portefeuilles sans risque."
+      }
+    }
   },
   "stack": {
     "heading": "TECH STACK",
