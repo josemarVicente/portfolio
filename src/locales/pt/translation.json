@@ -11,13 +11,13 @@
     "headlineItalic": "Engenharia que realmente entrega.",
     "bioHello": "Olá, eu sou o Josemar Vicente,",
     "bioRole": "um Desenvolvedor Full Stack",
-    "cta": "Vamos conversar"
+    "cta": "Entrar em contacto"
   },
   "about": {
     "label": "SOBRE MIM",
     "photoAlt": "Foto",
     "photoPlaceholder": "Foto Pessoal",
-    "text": "Sou um <strong>Desenvolvedor Full‑Stack e Mobile autodidata</strong>. Construo aplicações web modernas e experiências mobile rápidas, acessíveis e cuidadosamente feitas. Tenho experiência em <strong>React, Next.js, Node.js e React Native</strong> e infraestrutura cloud.<br/> <br/>Atualmente focado em criar <strong>produtos que saem do papel</strong> — arquitetura limpa, ótimo UX, sem enrolação.<br/> <br/>Código é artesanato. Performance é design."
+    "text": "Sou um <strong>programador full-stack e mobile</strong> focado em transformar ideias em produtos reais. Gosto de construir aplicações web modernas e experiências mobile que sejam rápidas, fluidas e visualmente limpas. Domino o ecossistema do <strong>React, Next.js, Node.js e React Native</strong>.<br/> <br/>Para mim, a engenharia não termina no backend; estende-se até ao detalhe da interface e à experiência de quem usa a app.<br/> <br/>O meu objetivo é simples: <strong>arquitetura limpa, código escalável e software que chega mesmo às mãos dos utilizadores</strong>."
   },
   "services": {
     "heading": "O QUE EU FAÇO",
@@ -54,22 +54,16 @@
     "featured": "Projetos em Destaque",
     "items": {
       "njila": {
-        "role": "Full Stack Engineer",
-        "context": "Njila",
+        "role": "Engenheiro de Software Full Stack",
+        "context": "Njila Ukwasi",
         "period": "Fev 2025 — Atualmente",
         "desc": "Responsável pela arquitetura e escala de aplicações móveis multiplataforma com React Native, focadas na digitalização de ecossistemas de transporte público e mobilidade urbana. Atuei também no desenvolvimento web focado no ecossistema Vue.js, Laravel e Inertia.js, otimizando a entrega de funcionalidades full-stack."
       },
       "tchiiwa": {
-        "role": "Lead Frontend Engineer",
-        "context": "Tchiiwa",
+        "role": "Líder de Desenvolvimento Frontend",
+        "context": "Tchiiwa Learn",
         "period": "Atualmente",
         "desc": "Lidero o desenvolvimento frontend das aplicações da Tchiiwa numa arquitetura de microfrontends. Responsável pelos frontends web e mobile de produtos core, incluindo o Tchiiwa Learn — uma plataforma LMS de grande escala."
-      },
-      "freelance": {
-        "role": "Engenheiro de Software Freelancer",
-        "context": "Independente",
-        "period": "2021 — Presente",
-        "desc": "Desenvolvimento end-to-end de soluções técnicas para diversos setores de negócio. Engenharia de sistemas de gestão de RH personalizados, landing pages otimizadas para conversão e backends robustos utilizando Express.js, Next.js e Laravel."
       },
       "aliacars": {
         "role": "Ecossistema Aliacars",
@@ -77,17 +71,11 @@
         "period": "WinnersSmart",
         "desc": "Infraestrutura de gestão de frotas que integra duas aplicações móveis (Cliente e Proprietário) conectadas em tempo real a dashboards web de administração e controlo interno."
       },
-      "montra": {
-        "role": "Montra",
-        "context": "Projetos em Destaque",
-        "period": "Projeto Pessoal",
-        "desc": "Aplicação móvel fintech desenvolvida com uma estética minimalista para controlo de orçamento e gestão financeira pessoal."
-      },
-      "simutrade": {
-        "role": "SimuTrade",
-        "context": "Projetos em Destaque",
-        "period": "Projeto Pessoal",
-        "desc": "Simulador de paper trading de alta fidelidade para processamento de dados de mercado em tempo real e simulação de carteiras financeiras."
+      "freelance": {
+        "role": "Engenheiro de Software Freelancer",
+        "context": "Independente",
+        "period": "2021 — Presente",
+        "desc": "Desenvolvimento end-to-end de soluções técnicas para diversos setores de negócio. Engenharia de sistemas de gestão de RH personalizados, landing pages otimizadas para conversão e backends robustos utilizando Express.js, Next.js e Laravel."
       }
     }
   },

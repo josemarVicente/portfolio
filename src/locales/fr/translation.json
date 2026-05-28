@@ -17,7 +17,7 @@
     "label": "À PROPOS DE MOI",
     "photoAlt": "Photo",
     "photoPlaceholder": "Photo personnelle",
-    "text": "Je suis un <strong>développeur Full‑Stack & Mobile autodidacte</strong>. Je crée des applications web modernes et des expériences mobiles rapides, accessibles et soignées. Mon expertise couvre <strong>React, Next.js, Node.js, React Native</strong> et l’infrastructure cloud.<br/> <br/>Actuellement concentré sur des <strong>produits qui sortent vraiment</strong> — architecture propre, excellente UX, zéro blabla.<br/> <br/>Le code est un artisanat. La performance est un design."
+    "text": "Je suis un <strong>développeur full-stack et mobile</strong> concentré sur la transformation d'idées en produits réels. J'aime construire des applications web modernes et des expériences mobiles rapides, fluides et visuellement épurées. Je maîtrise l'écosystème <strong>React, Next.js, Node.js et React Native</strong>.<br/> <br/>Pour moi, l'ingénierie ne s'arrête pas au backend ; elle s'étend jusqu'au détail de l'interface et à l'expérience de celles et ceux qui utilisent l'app.<br/> <br/>Mon objectif est simple : <strong>une architecture propre, du code scalable et des logiciels qui arrivent vraiment entre les mains des utilisateurs</strong>."
   },
   "services": {
     "heading": "CE QUE JE FAIS",
@@ -65,29 +65,17 @@
         "period": "Actuellement",
         "desc": "Je pilote le développement frontend des applications Tchiiwa sur une architecture microfrontend. Responsable des frontends web et mobile des produits phares, dont Tchiiwa Learn — une plateforme LMS de niveau entreprise."
       },
-      "freelance": {
-        "role": "Ingénieur logiciel freelance",
-        "context": "Indépendant",
-        "period": "2021 — Présent",
-        "desc": "Livraison de solutions techniques robustes de bout en bout pour des secteurs variés. Conception et déploiement de systèmes RH sur mesure, landing pages optimisées et backends haute disponibilité avec Express.js, Next.js et Laravel."
-      },
       "aliacars": {
         "role": "Écosystème Aliacars",
         "context": "Projets phares",
         "period": "WinnersSmart",
         "desc": "Architecture complète de gestion de flotte et location de véhicules : deux applications mobiles cross-platform (Client & Partenaire) synchronisées avec des dashboards web en temps réel pour propriétaires et opérations internes."
       },
-      "montra": {
-        "role": "Montra",
-        "context": "Projets phares",
-        "period": "Projet personnel",
-        "desc": "Application mobile fintech minimaliste pour un suivi budgétaire précis en temps réel et la gestion des finances personnelles."
-      },
-      "simutrade": {
-        "role": "SimuTrade",
-        "context": "Projets phares",
-        "period": "Projet personnel",
-        "desc": "Simulateur de paper trading haute fidélité pour l’ingestion de données de marché en temps réel et la simulation de portefeuilles sans risque."
+      "freelance": {
+        "role": "Ingénieur logiciel freelance",
+        "context": "Indépendant",
+        "period": "2021 — Présent",
+        "desc": "Livraison de solutions techniques robustes de bout en bout pour des secteurs variés. Conception et déploiement de systèmes RH sur mesure, landing pages optimisées et backends haute disponibilité avec Express.js, Next.js et Laravel."
       }
     }
   },

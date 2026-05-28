@@ -17,7 +17,7 @@
     "label": "ABOUT ME",
     "photoAlt": "Photo",
     "photoPlaceholder": "Personal Photo",
-    "text": "I’m a <strong>self‑taught Full‑Stack & Mobile Developer</strong>. I build modern web applications and mobile experiences that are fast, accessible, and meticulously crafted. My expertise spans <strong>React, Next.js, Node.js, React Native</strong>, and cloud infrastructure.<br/> <br/>Currently focused on building <strong>products that ship</strong> — clean architecture, great UX, no fluff.<br/> <br/>Code is craft. Performance is design."
+    "text": "I'm a <strong>full-stack and mobile developer</strong> focused on turning ideas into real products. I enjoy building modern web applications and mobile experiences that are fast, fluid, and visually clean. I'm fluent in the <strong>React, Next.js, Node.js, and React Native</strong> ecosystem.<br/> <br/>For me, engineering doesn't stop at the backend; it extends to interface detail and the experience of the people who use the app.<br/> <br/>My goal is simple: <strong>clean architecture, scalable code, and software that actually reaches users' hands</strong>."
   },
   "services": {
     "heading": "WHAT I DO",
@@ -65,29 +65,17 @@
         "period": "Present",
         "desc": "Leading frontend development across Tchiiwa's applications on a microfrontend architecture. Responsible for the web and mobile frontends of core products, including Tchiiwa Learn — an enterprise-grade Learning Management System."
       },
-      "freelance": {
-        "role": "Freelance Software Engineer",
-        "context": "Independent",
-        "period": "2021 — Present",
-        "desc": "Delivering robust, end-to-end technical solutions for diverse business verticals. Designed and deployed custom HR management systems, performance-optimized landing pages, and high-availability backends using Express.js, Next.js, and Laravel."
-      },
       "aliacars": {
         "role": "Aliacars Ecosystem",
         "context": "Featured Work",
         "period": "WinnersSmart",
         "desc": "A comprehensive fleet management and car rental architecture comprising dual cross-platform mobile apps (Client & Partner) synchronized with real-time web dashboards for vehicle owners and internal operations."
-      },
-      "montra": {
-        "role": "Montra",
-        "context": "Featured Work",
-        "period": "Personal Project",
-        "desc": "A minimalist fintech mobile application tailored for precise, real-time budget tracking and personal finance management."
-      },
-      "simutrade": {
-        "role": "SimuTrade",
-        "context": "Featured Work",
-        "period": "Personal Project",
-        "desc": "A high-fidelity paper trading simulator designed for real-time market data ingestion and risk-free financial portfolio simulation."
+    },
+      "freelance": {
+        "role": "Freelance Software Engineer",
+        "context": "Independent",
+        "period": "2021 — Present",
+        "desc": "Delivering robust, end-to-end technical solutions for diverse business verticals. Designed and deployed custom HR management systems, performance-optimized landing pages, and high-availability backends using Express.js, Next.js, and Laravel."
       }
     }
   },
