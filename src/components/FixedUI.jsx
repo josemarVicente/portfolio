@@ -23,7 +23,7 @@ export default function FixedUI() {
           </a>
         ))}
       </div>
-      <a href="/resume.pdf" className="fixed-resume">{t('fixed.resume')} &#8599;</a>
+      <a href="https://cv-josemarvicente.vercel.app/" className="fixed-resume">{t('fixed.resume')} &#8599;</a>
     </>
   );
 }
