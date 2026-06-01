@@ -47,7 +47,39 @@
   "work": {
     "heading": "Projetos",
     "toolsLabel": "Ferramentas e funcionalidades",
-    "imagePlaceholder": "Screenshot do projeto"
+    "imagePlaceholder": "Screenshot do projeto",
+    "projects": {
+      "njila": {
+        "title": "Njila",
+        "category": "Ecossistema de Mobilidade",
+        "tools": "Dois apps mobile e backend em microsserviços. NestJS, Java, React Native, Next.js"
+      },
+      "simutrade": {
+        "title": "SimuTrade",
+        "category": "Simulador de Trading",
+        "tools": "Plataforma de paper trading. Laravel, Next.js, Docker, Render"
+      },
+      "montra": {
+        "title": "Montra",
+        "category": "App Mobile",
+        "tools": "Controlo de orçamento com arquitetura offline-first. React Native, Expo, Supabase"
+      },
+      "aliacars": {
+        "title": "Aliacars",
+        "category": "Ecossistema de Aluguer",
+        "tools": "Dois apps mobile e sistema de gestão interno. NestJS, React Native, Next.js"
+      },
+      "xora": {
+        "title": "Xora",
+        "category": "Landing SaaS",
+        "tools": "Site de marketing para editor de vídeo com IA. Next.js, GSAP"
+      },
+      "angolacamparea": {
+        "title": "Angola Camp Area",
+        "category": "Landing Page",
+        "tools": "App utilitária de campismo — descobre áreas de campismo conhecidas. React"
+      }
+    }
   },
   "experience": {
     "heading": "CARREIRA & EXPERIÊNCIA",

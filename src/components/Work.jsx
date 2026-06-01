@@ -8,52 +8,12 @@ import './Work.css';
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const projects = [
-  {
-    num: '01',
-    title: 'Njila',
-    category: 'Mobility Ecosystem',
-    tools: 'Two mobile apps and a microservices backend. NestJS, Java, React Native, Next.js',
-    image: '/work/njila.png',
-    uri: 'https://njila-landing-page-lake.vercel.app/',
-  },
-  {
-    num: '02',
-    title: 'SimuTrade',
-    category: 'Trading Simulator',
-    tools: 'Paper trading platform. Laravel, Next.js, Docker, Render',
-    image: '/work/simutrade.png',
-    uri: 'https://simutrade-psi.vercel.app/',
-  },
-  {
-    num: '03',
-    title: 'Montra',
-    category: 'Mobile App',
-    tools: 'Budget tracking with offline-first architecture. React Native, Expo, Supabase',
-    image: '/work/montra.png',
-  },
-  {
-    num: '04',
-    title: 'Aliacars',
-    category: 'Car Rental Ecosystem',
-    tools: 'Two mobile apps and an internal management system. NestJS, React Native, Next.js',
-    image: '/work/aliacars.png',
-  },
-  {
-    num: '05',
-    title: 'Xora',
-    category: 'SaaS Landing',
-    tools: 'Marketing site for an AI video editor. Next.js, GSAP',
-    image: '/work/xora.png',
-    uri: 'https://xora-saas-landing-page-pearl.vercel.app/',
-  },
-  {
-    num: '06',
-    title: 'Angola Camp Area',
-    category: 'Landing Page',
-    tools: 'Camping utility app — discover known camp locations. React',
-    image: '/work/angolacamparea.png',
-    uri: 'https://angolacamparea.vercel.app/',
-  },
+  { id: 'njila', num: '01', image: '/work/njila.png', uri: 'https://njila-landing-page-lake.vercel.app/' },
+  { id: 'simutrade', num: '02', image: '/work/simutrade.png', uri: 'https://simutrade-psi.vercel.app/' },
+  { id: 'montra', num: '03', image: '/work/montra.png' },
+  { id: 'aliacars', num: '04', image: '/work/aliacars.png' },
+  { id: 'xora', num: '05', image: '/work/xora.png', uri: 'https://xora-saas-landing-page-pearl.vercel.app/' },
+  { id: 'angolacamparea', num: '06', image: '/work/angolacamparea.png', uri: 'https://angolacamparea.vercel.app/' },
 ];
 
 export default function Work() {
@@ -138,14 +98,15 @@ export default function Work() {
 
       <div className="work-cols" ref={trackRef}>
         {projects.map((p) => {
+          const title = t(`work.projects.${p.id}.title`);
           const media = p.image ? (
-            <img src={p.image} alt={p.title} className="work-img" />
+            <img src={p.image} alt={title} className="work-img" />
           ) : (
             <div className="work-img-placeholder">{t('work.imagePlaceholder')}</div>
           );
 
           return (
-            <div className="work-col" key={p.num}>
+            <div className={`work-col${p.uri ? ' work-col--linked' : ''}`} key={p.id}>
               <div className="work-num">{p.num}</div>
               <div className="work-title-row">
                 {p.uri ? (
@@ -155,22 +116,22 @@ export default function Work() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {p.title}
+                    {title}
                   </a>
                 ) : (
-                  <span className="work-title">{p.title}</span>
+                  <span className="work-title">{title}</span>
                 )}
-                <span className="work-cat">{p.category}</span>
+                <span className="work-cat">{t(`work.projects.${p.id}.category`)}</span>
               </div>
               <span className="work-tools-label">{t('work.toolsLabel')}</span>
-              <p className="work-tools">{p.tools}</p>
+              <p className="work-tools">{t(`work.projects.${p.id}.tools`)}</p>
               {p.uri ? (
                 <a
                   href={p.uri}
                   className="work-media-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={p.title}
+                  aria-label={title}
                 >
                   {media}
                 </a>
