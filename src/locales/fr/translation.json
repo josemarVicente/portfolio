@@ -46,38 +46,38 @@
   },
   "work": {
     "heading": "Projets",
-    "toolsLabel": "Outils et fonctionnalités",
+    "techLabel": "Technologies",
     "imagePlaceholder": "Capture du projet",
     "projects": {
       "njila": {
         "title": "Njila",
-        "category": "Écosystème de mobilité",
-        "tools": "Deux applications mobiles et un backend en microservices. NestJS, Java, React Native, Next.js"
+        "subtitle": "Écosystème de mobilité urbaine avec apps passagers et conducteurs, plus un backend microservices.",
+        "stack": "NestJS, Java, React Native, Next.js"
       },
       "simutrade": {
         "title": "SimuTrade",
-        "category": "Simulateur de trading",
-        "tools": "Plateforme de paper trading. Laravel, Next.js, Docker, Render"
+        "subtitle": "Simulateur de paper trading pour s'entraîner avec des données de marché en temps réel.",
+        "stack": "Laravel, Next.js, Docker, Render"
       },
       "montra": {
         "title": "Montra",
-        "category": "Application mobile",
-        "tools": "Suivi budgétaire avec architecture offline-first. React Native, Expo, Supabase"
+        "subtitle": "Application de finances personnelles axée sur le budget rapide et une architecture offline-first.",
+        "stack": "React Native, Expo, Supabase"
       },
       "aliacars": {
         "title": "Aliacars",
-        "category": "Écosystème de location",
-        "tools": "Deux apps mobiles et un système de gestion interne. NestJS, React Native, Next.js"
+        "subtitle": "Plateforme de location de véhicules avec apps clients et propriétaires, plus un tableau de bord interne.",
+        "stack": "NestJS, React Native, Next.js"
       },
       "xora": {
         "title": "Xora",
-        "category": "Landing SaaS",
-        "tools": "Site marketing pour un éditeur vidéo IA. Next.js, GSAP"
+        "subtitle": "Landing animée pour un SaaS d'édition vidéo propulsé par l'intelligence artificielle.",
+        "stack": "Next.js, GSAP"
       },
       "angolacamparea": {
         "title": "Angola Camp Area",
-        "category": "Landing Page",
-        "tools": "Application utilitaire de camping — découvrez des zones de camp connues. React"
+        "subtitle": "Landing page pour une app qui aide à découvrir et explorer des zones de camping connues.",
+        "stack": "React"
       }
     }
   },

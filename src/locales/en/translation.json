@@ -46,38 +46,38 @@
   },
   "work": {
     "heading": "Projects",
-    "toolsLabel": "Tools and features",
+    "techLabel": "Tech",
     "imagePlaceholder": "Project screenshot",
     "projects": {
       "njila": {
         "title": "Njila",
-        "category": "Mobility Ecosystem",
-        "tools": "Two mobile apps and a microservices backend. NestJS, Java, React Native, Next.js"
+        "subtitle": "Urban mobility ecosystem with rider and driver apps, plus a microservices backend.",
+        "stack": "NestJS, Java, React Native, Next.js"
       },
       "simutrade": {
         "title": "SimuTrade",
-        "category": "Trading Simulator",
-        "tools": "Paper trading platform. Laravel, Next.js, Docker, Render"
+        "subtitle": "Paper trading simulator to practice investing with real-time market data.",
+        "stack": "Laravel, Next.js, Docker, Render"
       },
       "montra": {
         "title": "Montra",
-        "category": "Mobile App",
-        "tools": "Budget tracking with offline-first architecture. React Native, Expo, Supabase"
+        "subtitle": "Personal finance app focused on fast budget tracking and an offline-first architecture.",
+        "stack": "React Native, Expo, Supabase"
       },
       "aliacars": {
         "title": "Aliacars",
-        "category": "Car Rental Ecosystem",
-        "tools": "Two mobile apps and an internal management system. NestJS, React Native, Next.js"
+        "subtitle": "Car rental platform with client and owner apps, plus an internal management dashboard.",
+        "stack": "NestJS, React Native, Next.js"
       },
       "xora": {
         "title": "Xora",
-        "category": "SaaS Landing",
-        "tools": "Marketing site for an AI video editor. Next.js, GSAP"
+        "subtitle": "Animated marketing landing for an AI-powered video editing SaaS.",
+        "stack": "Next.js, GSAP"
       },
       "angolacamparea": {
         "title": "Angola Camp Area",
-        "category": "Landing Page",
-        "tools": "Camping utility app — discover known camp locations. React"
+        "subtitle": "Landing page for an app that helps users discover and explore known camping areas.",
+        "stack": "React"
       }
     }
   },

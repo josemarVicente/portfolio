@@ -121,10 +121,10 @@ export default function Work() {
                 ) : (
                   <span className="work-title">{title}</span>
                 )}
-                <span className="work-cat">{t(`work.projects.${p.id}.category`)}</span>
               </div>
-              <span className="work-tools-label">{t('work.toolsLabel')}</span>
-              <p className="work-tools">{t(`work.projects.${p.id}.tools`)}</p>
+              <p className="work-subtitle">{t(`work.projects.${p.id}.subtitle`)}</p>
+              <span className="work-tech-label">{t('work.techLabel')}</span>
+              <p className="work-stack">{t(`work.projects.${p.id}.stack`)}</p>
               {p.uri ? (
                 <a
                   href={p.uri}
