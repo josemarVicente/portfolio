@@ -1,7 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Cursor.css';
 
+const FINE_POINTER_MQ = '(hover: hover) and (pointer: fine)';
+
 export default function Cursor() {
+  const [enabled, setEnabled] = useState(false);
   const dotRef = useRef(null);
   const ringRef = useRef(null);
 
@@ -11,6 +14,16 @@ export default function Cursor() {
   const rafId = useRef(null);
 
   useEffect(() => {
+    const mq = window.matchMedia(FINE_POINTER_MQ);
+    const update = () => setEnabled(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled) return undefined;
+
     const onMove = (e) => {
       mouseCoords.current = { x: e.clientX, y: e.clientY };
 
@@ -55,7 +68,9 @@ export default function Cursor() {
         el.removeEventListener('mouseleave', handleShrink);
       });
     };
-  }, []);
+  }, [enabled]);
+
+  if (!enabled) return null;
 
   return (
     <>

@@ -22,9 +22,13 @@ body {
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.6;
-  cursor: none;
   /* No overflow-x: hidden or clip here — GSAP horizontal scroll needs
      the full scrollWidth to be measurable and paintable */
+}
+
+/* Custom cursor only on devices with a precise pointer (mouse/trackpad) */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
 }
 
 /* scrollbar */
