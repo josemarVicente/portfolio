@@ -2,14 +2,29 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
+const LANGUAGES = [
+  { code: 'pt', flag: '🇵🇹', label: 'Português' },
+  { code: 'en', flag: '🇺🇸', label: 'English' },
+  { code: 'fr', flag: '🇫🇷', label: 'Français' },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [compactLang, setCompactLang] = useState(false);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1024px)');
+    const update = () => setCompactLang(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
   }, []);
 
   const links = [
@@ -31,14 +46,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <label className="nav-lang" aria-label="Language">
+        <label className={`nav-lang${compactLang ? ' nav-lang--compact' : ''}`} aria-label="Language">
           <select
             value={i18n.resolvedLanguage || i18n.language}
             onChange={(e) => i18n.changeLanguage(e.target.value)}
           >
-            <option value="pt">🇵🇹 Português</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="fr">🇫🇷 Français</option>
+            {LANGUAGES.map(({ code, flag, label }) => (
+              <option key={code} value={code}>
+                {compactLang ? flag : `${flag} ${label}`}
+              </option>
+            ))}
           </select>
         </label>
       </div>
