@@ -8,12 +8,52 @@ import './Work.css';
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const projects = [
-  { num: '01', title: 'Project Alpha',   category: 'Web App',       tools: 'Next.js, TypeScript, Tailwind, Supabase, Vercel' },
-  { num: '02', title: 'Project Beta',    category: 'Mobile App',    tools: 'React Native, Expo, Node.js, PostgreSQL, Stripe' },
-  { num: '03', title: 'Project Gamma',   category: 'Dashboard',     tools: 'React, D3.js, FastAPI, Redis, Docker, AWS' },
-  { num: '04', title: 'Project Delta',   category: 'E-Commerce',    tools: 'Shopify, Liquid, GraphQL, Klaviyo, Cloudflare' },
-  { num: '05', title: 'Project Epsilon', category: 'Design System', tools: 'Figma, Storybook, Radix UI, CSS Modules, Chromatic' },
-  { num: '06', title: 'Project Zeta',    category: 'AI Platform',   tools: 'Python, LangChain, FastAPI, Pinecone, OpenAI, GCP' },
+  {
+    num: '01',
+    title: 'Njila',
+    category: 'Mobility Ecosystem',
+    tools: 'Two mobile apps and a microservices backend. NestJS, Java, React Native, Next.js',
+    image: '/work/njila.png',
+    uri: 'https://njila-landing-page-lake.vercel.app/',
+  },
+  {
+    num: '02',
+    title: 'SimuTrade',
+    category: 'Trading Simulator',
+    tools: 'Paper trading platform. Laravel, Next.js, Docker, Render',
+    image: '/work/simutrade.png',
+    uri: 'https://simutrade-psi.vercel.app/',
+  },
+  {
+    num: '03',
+    title: 'Montra',
+    category: 'Mobile App',
+    tools: 'Budget tracking with offline-first architecture. React Native, Expo, Supabase',
+    image: '/work/montra.png',
+  },
+  {
+    num: '04',
+    title: 'Aliacars',
+    category: 'Car Rental Ecosystem',
+    tools: 'Two mobile apps and an internal management system. NestJS, React Native, Next.js',
+    image: '/work/aliacars.png',
+  },
+  {
+    num: '05',
+    title: 'Xora',
+    category: 'SaaS Landing',
+    tools: 'Marketing site for an AI video editor. Next.js, GSAP',
+    image: '/work/xora.png',
+    uri: 'https://xora-saas-landing-page-pearl.vercel.app/',
+  },
+  {
+    num: '06',
+    title: 'Angola Camp Area',
+    category: 'Landing Page',
+    tools: 'Camping utility app — discover known camp locations. React',
+    image: '/work/angolacamparea.png',
+    uri: 'https://angolacamparea.vercel.app/',
+  },
 ];
 
 export default function Work() {
@@ -97,18 +137,49 @@ export default function Work() {
       </div>
 
       <div className="work-cols" ref={trackRef}>
-        {projects.map((p) => (
-          <div className="work-col" key={p.num}>
-            <div className="work-num">{p.num}</div>
-            <div className="work-title-row">
-              <span className="work-title">{p.title}</span>
-              <span className="work-cat">{p.category}</span>
-            </div>
-            <span className="work-tools-label">{t('work.toolsLabel')}</span>
-            <p className="work-tools">{p.tools}</p>
+        {projects.map((p) => {
+          const media = p.image ? (
+            <img src={p.image} alt={p.title} className="work-img" />
+          ) : (
             <div className="work-img-placeholder">{t('work.imagePlaceholder')}</div>
-          </div>
-        ))}
+          );
+
+          return (
+            <div className="work-col" key={p.num}>
+              <div className="work-num">{p.num}</div>
+              <div className="work-title-row">
+                {p.uri ? (
+                  <a
+                    href={p.uri}
+                    className="work-title work-title-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {p.title}
+                  </a>
+                ) : (
+                  <span className="work-title">{p.title}</span>
+                )}
+                <span className="work-cat">{p.category}</span>
+              </div>
+              <span className="work-tools-label">{t('work.toolsLabel')}</span>
+              <p className="work-tools">{p.tools}</p>
+              {p.uri ? (
+                <a
+                  href={p.uri}
+                  className="work-media-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={p.title}
+                >
+                  {media}
+                </a>
+              ) : (
+                media
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
