@@ -52,17 +52,17 @@
       "njila": {
         "title": "Njila",
         "subtitle": "Urban mobility ecosystem with rider and driver apps, plus a microservices backend.",
-        "stack": "NestJS, Java, React Native, Next.js"
+        "stack": "NestJS, Java, React Native, Next.js, PostgreSQL"
       },
       "simutrade": {
         "title": "SimuTrade",
         "subtitle": "Paper trading simulator to practice investing with real-time market data.",
-        "stack": "Laravel, Next.js, Docker, Render"
+        "stack": "Laravel, Next.js, Docker, Render, MySQL, NeonDB"
       },
       "montra": {
         "title": "Montra",
         "subtitle": "Personal finance app focused on fast budget tracking and an offline-first architecture.",
-        "stack": "React Native, Expo, Supabase"
+        "stack": "React Native, Expo, Supabase, SQLite, PostgreSQL"
       },
       "aliacars": {
         "title": "Aliacars",
@@ -72,7 +72,7 @@
       "xora": {
         "title": "Xora",
         "subtitle": "Animated marketing landing for an AI-powered video editing SaaS.",
-        "stack": "Next.js, GSAP"
+        "stack": "React, Next.js, GSAP"
       },
       "angolacamparea": {
         "title": "Angola Camp Area",
