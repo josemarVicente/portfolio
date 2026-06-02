@@ -52,7 +52,7 @@
       "njila": {
         "title": "Njila",
         "subtitle": "Urban mobility ecosystem with rider and driver apps, plus a microservices backend.",
-        "stack": "NestJS, Java, React Native, Next.js, PostgreSQL"
+        "stack": "NestJS, Java, Vue.js, React Native, Next.js, PostgreSQL"
       },
       "simutrade": {
         "title": "SimuTrade",
